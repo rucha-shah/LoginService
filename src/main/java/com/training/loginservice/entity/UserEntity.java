@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 @Getter
 @Setter
-@Document(collection = "user")
+@Document(collection = "userRegistration")
 
 public class UserEntity {
     @Id
