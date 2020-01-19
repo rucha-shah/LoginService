@@ -5,21 +5,22 @@ import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 
 @Getter
 @Setter
 @Document(collection = "user")
+
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    int userId;
+    //@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "id_generator")
+
+    String userId;
     String userName;
     String email;
     String password;
     String userImageUrl;
     String address;
-    int phoneNo;
+    long phoneNo;
 
 }

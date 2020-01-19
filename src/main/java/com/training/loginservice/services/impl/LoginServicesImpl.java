@@ -13,8 +13,7 @@ public class LoginServicesImpl implements LoginServices {
     LoginRepository loginRepository;
 
     @Override
-    public UserEntity save(UserEntity userEntity)
-    {
+    public UserEntity save(UserEntity userEntity) {
         return loginRepository.save(userEntity);
     }
 }

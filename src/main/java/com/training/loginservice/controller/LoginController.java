@@ -20,12 +20,12 @@ public class LoginController {
     LoginServices loginServices;
 
     @PostMapping("/register")
-    public ResponseEntity<Integer> register(@RequestBody UserDTO userDTO)
+    public ResponseEntity<String> register(@RequestBody UserDTO userDTO)
     {
         UserEntity userEntity=new UserEntity();
         BeanUtils.copyProperties(userDTO,userEntity);
         UserEntity userCreated=loginServices.save(userEntity);
 
-        return new ResponseEntity<Integer>(userCreated.getUserId(),HttpStatus.CREATED);
+        return new ResponseEntity<String>(userCreated.getUserId(),HttpStatus.CREATED);
     }
 }

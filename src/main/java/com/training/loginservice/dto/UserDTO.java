@@ -9,7 +9,7 @@ import sun.security.util.Password;
 
 public class UserDTO {
 
-    int userId;
+    String userId;
     String userName;
     String email;
     String password;
